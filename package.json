@@ -1,0 +1,38 @@
+{
+  "name": "react-native-app-metrica",
+  "version": "1.0.0",
+  "description": "React Native bridge to the App Metrica on both iOS and Android",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:eslint",
+    "test:eslint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tvilteam/react-native-app-metrica"
+  },
+  "keywords": [
+    "react-native",
+    "appmetrica",
+    "component",
+    "ios",
+    "android"
+  ],
+  "author": "Aleksei Androsov <doochik@ya.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tvilteam/react-native-app-metrica/issues"
+  },
+  "homepage": "https://github.com/tvilteam/react-native-app-metrica#readme",
+  "peerDependencies": {
+    "react-native": ">=0.58"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^5.3.0",
+    "eslint-plugin-flowtype": "^2.37.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-react-native": "^3.1.0",
+    "flow-bin": "0.49.1"
+  }
+}
