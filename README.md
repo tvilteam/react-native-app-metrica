@@ -1,48 +1,35 @@
-# react-native-app-metrica
-React Native bridge to the [AppMetrica](https://appmetrica.yandex.com/) on both iOS and Android.
+# react-native-appmetrica
 
-[![Build Status](https://travis-ci.org/doochik/react-native-app-metrica.svg?branch=master)](https://travis-ci.org/doochik/react-native-app-metrica)
-[![NPM version](https://badge.fury.io/js/react-native-app-metrica.svg)](https://www.npmjs.com/package/react-native-app-metrica)
+React Native bridge to the [AppMetrica](https://appmetrica.yandex.com/) on both iOS and Android.
 
 ## Installation
 
-1. **Only for iOS**: [setup AppMetrica](https://tech.yandex.com/appmetrica/).
-`YandexMobileMetrica.framework` should be placed at `<project_dir>/ios/` or `<project_dir>/ios/Frameworks/`.
-Otherwise you'll get build error.
-2. `npm install --save react-native-app-metrica`
-3. `react-native link react-native-app-metrica`
+1. `npm install react-native-appmetrica --save`
+2. If React Native version <= 0.59: \
+   `react-native link react-native-appmetrica`
+3. iOS only
 
-**iOS notice**: If you build failed after installing SDK and `react-native-app-metrica`
-make sure `YandexMobileMetrica.framework` and `libRCTAppMetrica.a` are included at Build Phase -> Link Binary With Libraries
-
-## Example
-
-```js
-import AppMetrica from 'react-native-app-metrica';
-
-AppMetrica.activateWithApiKey('34h3g43-j34h3j4-3j4h3j43-343-34');
-
-AppMetrica.reportEvent('Hello world');
-```
+- if `${PROJECT_DIR}/ios/Podfile` exists: \
+  `npx pod-install`
+- if `${PROJECT_DIR}/ios/Podfile` don't exists: \
+  [Setup AppMetrica](https://appmetrica.yandex.com/docs/mobile-sdk-dg/tasks/ios-quickstart.html) and placed frameworks at `${PROJECT_DIR}/ios/Frameworks`
 
 ## Usage
 
 ```js
-import AppMetrica from 'react-native-app-metrica';
+import AppMetrica from "react-native-appmetrica";
 
 // Starts the statistics collection process.
-AppMetrica.activateWithApiKey('...KEY...');
-// OR
-AppMetrica.activateWithConfig({
-  apiKey: '...KEY...',
+AppMetrica.activate({
+  apiKey: "...KEY...",
   sessionTimeout: 120,
   firstActivationAsUpdate: true,
 });
 
 // Sends a custom event message and additional parameters (optional).
-AppMetrica.reportEvent('My event');
-AppMetrica.reportEvent('My event', { foo: 'bar' });
+AppMetrica.reportEvent("My event");
+AppMetrica.reportEvent("My event", { foo: "bar" });
 
 // Send a custom error event.
-AppMetrica.reportError('My error');
+AppMetrica.reportError("My error");
 ```
