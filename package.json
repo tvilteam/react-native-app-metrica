@@ -18,7 +18,7 @@
     "ios",
     "android"
   ],
-  "author": "Aleksei Androsov <doochik@ya.ru>",
+  "author": "Aleksei Androsov <doochik@ya.ru> && Andrey Bondarenko",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tvilteam/react-native-app-metrica/issues"
