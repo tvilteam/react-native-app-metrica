@@ -1,35 +1,38 @@
 {
-  "name": "react-native-appmetrica",
-  "title": "Yandex AppMetrica React Native Plugin",
-  "version": "2.0.0",
-  "description": "React Native plugin for AppMetrica analytics tool",
+  "name": "react-native-app-metrica",
+  "version": "1.0.0",
+  "description": "React Native bridge to the App Metrica on both iOS and Android",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:eslint",
+    "test:eslint": "eslint ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yandexmobile/react-native-appmetrica.git"
+    "url": "git+https://github.com/tvilteam/react-native-app-metrica"
   },
   "keywords": [
-    "yandex",
-    "appmetrica",
-    "metrica",
-    "analytics",
-    "tracking",
     "react-native",
-    "ecosystem:react-native",
-    "react-native-ios",
-    "react-native-android"
+    "appmetrica",
+    "component",
+    "ios",
+    "android"
   ],
-  "author": {
-    "name": "YANDEX LLC"
-  },
+  "author": "Aleksei Androsov <doochik@ya.ru>",
   "license": "MIT",
-  "homepage": "https://appmetrica.yandex.com/docs",
+  "bugs": {
+    "url": "https://github.com/tvilteam/react-native-app-metrica/issues"
+  },
+  "homepage": "https://github.com/tvilteam/react-native-app-metrica#readme",
   "peerDependencies": {
-    "react-native": ">=0.59.0 <1.0.x"
+    "react-native": ">=0.58"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.3.0",
+    "eslint-plugin-flowtype": "^2.37.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-native": "^3.7.0",
+    "flow-bin": "0.106.3"
   }
 }
